@@ -28,20 +28,10 @@ export default function GraphicDesignSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-block p-4 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 mb-6"
-          >
+        <div className="text-center mb-16">
+          <div className="inline-block p-4 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 mb-6">
             <Palette className="w-12 h-12 text-white" />
-          </motion.div>
+          </div>
 
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
             Graphic Design
@@ -52,12 +42,7 @@ export default function GraphicDesignSection() {
           </p>
 
           {/* Course Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-wrap justify-center gap-8 mb-12"
-          >
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
             <div className="text-center">
               <div className="text-4xl font-bold text-purple-400 mb-2">12</div>
               <div className="text-purple-200">Weeks</div>
@@ -74,24 +59,14 @@ export default function GraphicDesignSection() {
               <div className="text-4xl font-bold text-purple-400 mb-2">98%</div>
               <div className="text-purple-200">Success Rate</div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Course Content Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid lg:grid-cols-2 gap-12 items-center mb-16"
-        >
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Column - Course Description */}
           <div className="space-y-8">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6"
-            >
+            <div className="space-y-6">
               <h3 className="text-3xl font-bold text-white mb-4">What You'll Learn</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3 group">
@@ -119,7 +94,7 @@ export default function GraphicDesignSection() {
                   <p className="text-purple-200 group-hover:text-white transition-colors duration-300">Understand print and digital design workflows</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
 
 
@@ -127,12 +102,7 @@ export default function GraphicDesignSection() {
           </div>
 
           {/* Right Column - Photoshop Interface Demo */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 group">
               <h4 className="text-2xl font-bold text-white mb-6 text-center">Photoshop Interface</h4>
 
@@ -219,16 +189,11 @@ export default function GraphicDesignSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Additional Features */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid md:grid-cols-3 gap-8 mb-16"
-        >
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {[
             { icon: Users, title: "Live Sessions", desc: "Weekly Q&A with industry experts" },
             { icon: Award, title: "Portfolio Building", desc: "Create 10+ professional projects" },
@@ -258,20 +223,15 @@ export default function GraphicDesignSection() {
 
 
           ))}
-        </motion.div>
+        </div>
 
         {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center"
-        >
+        <div className="text-center">
           <button className="group bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-full text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
             Start Learning
             <ArrowRight className="inline-block ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
           </button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

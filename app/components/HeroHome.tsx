@@ -7,13 +7,7 @@ import dynamic from 'next/dynamic'
 // Dynamically import the 3D scene to avoid SSR issues
 const MoonScene = dynamic(() => import('./MoonScene'), { 
   ssr: false,
-  loading: () => (
-    <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 animate-pulse rounded-lg">
-      <div className="flex items-center justify-center h-full">
-        <div className="text-white text-sm">Loading 3D Scene...</div>
-      </div>
-    </div>
-  )
+  loading: () => null
 })
 
 export default function HeroHome() {

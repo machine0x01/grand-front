@@ -87,21 +87,11 @@ export default function AboutSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12 sm:mb-16 md:mb-20"
-        >
-          <motion.div
-            initial={{ scale: 0.8 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-full backdrop-blur-sm mb-6 sm:mb-8 text-xs sm:text-sm"
-          >
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-full backdrop-blur-sm mb-6 sm:mb-8 text-xs sm:text-sm">
             <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
             <span className="text-blue-200 font-medium">Creative Education Platform</span>
-          </motion.div>
+          </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             We're Building the
@@ -114,17 +104,12 @@ export default function AboutSection() {
             Empowering creators worldwide with cutting-edge design, animation, and creative skills.
             Join thousands of students who've transformed their passion into profession.
           </p>
-        </motion.div>
+        </div>
 
         {/* Interactive Content Grid */}
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center mb-16 sm:mb-20 lg:mb-24">
           {/* Content Section */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6 sm:space-y-8 order-2 lg:order-1"
-          >
+          <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeSection}
@@ -157,15 +142,10 @@ export default function AboutSection() {
 
               </motion.div>
             </AnimatePresence>
-          </motion.div>
+          </div>
 
           {/* Interactive Visual Section */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative order-1 lg:order-2"
-          >
+          <div className="relative order-1 lg:order-2">
             {/* Main Visual Container - Galaxy Background */}
             <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900 rounded-2xl sm:rounded-3xl border border-slate-700/50 backdrop-blur-sm overflow-hidden">
               {/* Galaxy Background with Stars */}
@@ -445,40 +425,24 @@ export default function AboutSection() {
                 </motion.button>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-16 sm:mb-20 lg:mb-24"
-        >
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-16 sm:mb-20 lg:mb-24">
           {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center group"
-            >
+            <div key={stat.label} className="text-center group">
               <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl sm:rounded-2xl border border-purple-400/30 mx-auto mb-3 sm:mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <stat.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-purple-400" />
               </div>
               <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
               <div className="text-xs sm:text-sm text-purple-300">{stat.label}</div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Core Values Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-16 sm:mb-20 lg:mb-24"
-        >
+        <div className="mb-16 sm:mb-20 lg:mb-24">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">Our Core Values</h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-purple-200 max-w-xs sm:max-w-sm md:max-w-2xl mx-auto px-4">
@@ -488,30 +452,19 @@ export default function AboutSection() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
+              <div key={value.title} className="group">
                 <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br ${value.color} rounded-xl sm:rounded-2xl mx-auto mb-3 sm:mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                   <value.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-white text-center mb-2">{value.title}</h3>
                 <p className="text-xs sm:text-sm text-purple-200 text-center">{value.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
+        <div className="text-center">
           <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-400/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 backdrop-blur-sm">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
               Ready to Start Your Creative Journey?
@@ -538,7 +491,7 @@ export default function AboutSection() {
               </motion.button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

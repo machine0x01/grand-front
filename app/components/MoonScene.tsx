@@ -5,52 +5,48 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
 
-// GLB Model component with better error handling
+// GLB Model component with entrance animation
 function AstronautModel() {
   const meshRef = useRef<THREE.Mesh>(null)
-  const [modelLoaded, setModelLoaded] = useState(false)
+  const [hasEntered, setHasEntered] = useState(false)
   
   // Load the GLB file
   const gltf = useGLTF('/3d/small-asturnate.glb')
   const { nodes, materials, scene } = gltf
-
-  // Check if model is loaded
-  useEffect(() => {
-    if (scene && Object.keys(nodes).length > 0) {
-      setModelLoaded(true)
-    }
-  }, [scene, nodes])
-
-  // Animation frame
-  useFrame((state) => {
-    if (!meshRef.current || !modelLoaded) return
-    
-    const time = state.clock.getElapsedTime()
-    
-    // Gentle floating motion
-    meshRef.current.position.y = Math.sin(time * 0.5) * 0.1
-    
-    // Subtle rotation
-    meshRef.current.rotation.y = Math.sin(time * 0.3) * 0.1
-  })
-
-  // Show loading state
-  if (!modelLoaded) {
-    return (
-      <mesh position={[0, 0, 0]}>
-        <sphereGeometry args={[1, 32, 32]} />
-        <meshStandardMaterial color="#6b7280" />
-      </mesh>
-    )
-  }
 
   // Clone the scene to avoid modifying the original
   const clonedScene = scene.clone()
   
   // Apply transformations to the cloned scene
   clonedScene.scale.set(3, 3, 3)
-  clonedScene.position.set(0, 0, 0)
   clonedScene.rotation.set(1, 0, 0)
+
+  // Animation frame
+  useFrame((state) => {
+    if (!meshRef.current) return
+    
+    const time = state.clock.getElapsedTime()
+    
+    // Entrance animation from left
+    if (!hasEntered && time > 0.1) {
+      const progress = Math.min((time - 0.1) * 2, 1) // 0.5 second entrance
+      const easeOut = 1 - Math.pow(1 - progress, 3) // Ease out cubic
+      meshRef.current.position.x = -10 + (10 * easeOut) // Move from -10 to 0
+      meshRef.current.position.y = 0 // Keep Y at 0 during entrance
+      
+      if (progress >= 1) {
+        setHasEntered(true)
+      }
+    }
+    
+    // Gentle floating motion (only after entrance)
+    if (hasEntered) {
+      meshRef.current.position.y = Math.sin(time * 0.5) * 0.1
+      
+      // Subtle rotation
+      meshRef.current.rotation.y = Math.sin(time * 0.3) * 0.1
+    }
+  })
 
   return (
     <primitive 
@@ -92,12 +88,7 @@ export default function MoonScene() {
         <pointLight position={[10, -10, -10]} intensity={0.5} color="#60a5fa" />
 
         {/* 3D Model */}
-        <Suspense fallback={
-          <mesh position={[0, 0, 0]}>
-            <sphereGeometry args={[1, 32, 32]} />
-            <meshStandardMaterial color="#6b7280" />
-          </mesh>
-        }>
+        <Suspense fallback={null}>
           <AstronautModel />
         </Suspense>
 

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useMemo } from 'react'
+import React, { useMemo, memo } from 'react'
 
 interface Star {
   size: number
@@ -36,7 +36,7 @@ function seededRandom(seed: string, index: number): number {
   return x - Math.floor(x)
 }
 
-export default function AnimatedStars({
+const AnimatedStars = memo(function AnimatedStars({
   count = 100,
   className = '',
   background = `
@@ -126,4 +126,6 @@ export default function AnimatedStars({
       {stars.map((star, index) => renderStar(star, index))}
     </div>
   )
-}
+})
+
+export default AnimatedStars
