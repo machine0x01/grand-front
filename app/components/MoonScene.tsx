@@ -12,7 +12,7 @@ function AstronautModel() {
   
   // Load the GLB file
   const gltf = useGLTF('/3d/small-asturnate.glb')
-  const { nodes, materials, scene } = gltf
+  const { scene } = gltf
 
   // Clone the scene to avoid modifying the original
   const clonedScene = scene.clone()

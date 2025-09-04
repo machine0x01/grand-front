@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React from 'react'
 import AnimatedStars from './AnimatedStars'
 import dynamic from 'next/dynamic'
 
@@ -11,7 +11,6 @@ const MoonScene = dynamic(() => import('./MoonScene'), {
 })
 
 export default function HeroHome() {
-  const starsRef = useRef<HTMLDivElement>(null)
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-black via-slate-950 to-black px-4 sm:px-6 lg:px-8 overflow-hidden">

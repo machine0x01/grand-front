@@ -3,7 +3,6 @@
 import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import QuoteHeader from '../Title';
 import AnimatedStars from './AnimatedStars';
 
 // TypeScript Interfaces
@@ -316,7 +315,7 @@ const CreationsShowcase: React.FC<CreationsShowcaseProps> = ({ courses_section =
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentPage, totalPages, hoveredProject]);
+  }, [currentPage, totalPages, hoveredProject, handlePageChange]);
 
   if (!currentProject) {
     return (

@@ -3,7 +3,6 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Instagram, ArrowUp } from 'lucide-react';
 import Planet3D from './HallBall3d';
-import AnimatedStars from './AnimatedStars';
 
 function Footer() {
   const footerRef = useRef<HTMLElement>(null);
@@ -91,7 +90,7 @@ function Footer() {
          </div>
 
          {/* Footer Links */}
-         {footerLinks.map((section, index) => (
+         {footerLinks.map((section) => (
            <div key={section.title}>
              <h4 className="text-white font-semibold mb-4">{section.title}</h4>
              <ul className="space-y-2">

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Check, Play, Zap, Rocket, Video, Users, Award, Star, CheckCircle } from "lucide-react"
+import { ArrowRight, Play, Video, Users, Award, Star, CheckCircle } from "lucide-react"
 import AnimatedStars from "./AnimatedStars"
 
 
@@ -73,7 +73,7 @@ export default function MotionGraphicsSection() {
           {/* Left Column - Course Description */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white mb-4">What You'll Learn</h3>
+              <h3 className="text-3xl font-bold text-white mb-4">What You&apos;ll Learn</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3 group">
                   <div className="w-6 h-6 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300">

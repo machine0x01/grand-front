@@ -2,7 +2,7 @@
 
 import { useRef, useState, memo, useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Sphere, Environment, OrbitControls, useTexture } from '@react-three/drei'
+import { Sphere, Environment, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 
 const PlanetMesh = memo(function PlanetMesh({ isHovered }: { isHovered: boolean }) {

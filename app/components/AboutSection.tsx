@@ -10,7 +10,6 @@ import {
   Award,
   Zap,
   Sparkles,
-  ArrowRight,
   Play,
   Star,
   CheckCircle,
@@ -28,7 +27,7 @@ export default function AboutSection() {
     mission: {
       title: "Our Mission",
       subtitle: "Empowering Creative Minds",
-      description: "We're on a mission to democratize creative education, making world-class design and animation skills accessible to everyone, everywhere.",
+      description: "We&apos;re on a mission to democratize creative education, making world-class design and animation skills accessible to everyone, everywhere.",
       icon: Target,
       color: "from-blue-500 to-purple-600",
       bgColor: "from-blue-500/10 to-purple-600/10",
@@ -46,7 +45,7 @@ export default function AboutSection() {
     story: {
       title: "Our Story",
       subtitle: "From Passion to Purpose",
-      description: "Born from a love of creativity and technology, we've evolved from a small design studio to a comprehensive creative education platform.",
+      description: "Born from a love of creativity and technology, we&apos;ve evolved from a small design studio to a comprehensive creative education platform.",
       icon: BookOpen,
       color: "from-pink-500 to-red-600",
       bgColor: "from-pink-500/10 to-red-600/10",
@@ -94,7 +93,7 @@ export default function AboutSection() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            We're Building the
+            We&apos;re Building the
             <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
               Future of Learning
             </span>
@@ -102,7 +101,7 @@ export default function AboutSection() {
 
           <p className="text-base sm:text-lg md:text-xl text-purple-200 max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-4">
             Empowering creators worldwide with cutting-edge design, animation, and creative skills.
-            Join thousands of students who've transformed their passion into profession.
+            Join thousands of students who&apos;ve transformed their passion into profession.
           </p>
         </div>
 
@@ -151,7 +150,7 @@ export default function AboutSection() {
               {/* Galaxy Background with Stars */}
               <div className="absolute inset-0">
                 {/* Deep space gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 via-blue-900/10 to-slate-900"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900"></div>
 
                 {/* Nebula clouds */}
                 <div className="absolute top-0 left-0 w-full h-full opacity-30">
@@ -430,7 +429,7 @@ export default function AboutSection() {
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-16 sm:mb-20 lg:mb-24">
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div key={stat.label} className="text-center group">
               <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl sm:rounded-2xl border border-purple-400/30 mx-auto mb-3 sm:mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <stat.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-purple-400" />
@@ -451,7 +450,7 @@ export default function AboutSection() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {values.map((value, index) => (
+            {values.map((value) => (
               <div key={value.title} className="group">
                 <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br ${value.color} rounded-xl sm:rounded-2xl mx-auto mb-3 sm:mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                   <value.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
@@ -470,7 +469,7 @@ export default function AboutSection() {
               Ready to Start Your Creative Journey?
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-purple-200 mb-6 sm:mb-8 max-w-xs sm:max-w-sm md:max-w-2xl mx-auto px-4">
-              Join thousands of creators who've already transformed their skills and careers with our platform
+              Join thousands of creators who&apos;ve already transformed their skills and careers with our platform
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <motion.button
