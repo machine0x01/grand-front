@@ -11,7 +11,7 @@ function AstronautModel() {
   const [hasEntered, setHasEntered] = useState(false)
   
   // Load the GLB file
-  const gltf = useGLTF('/3d/small-asturnate.glb')
+  const gltf = useGLTF('/3d/asturant.glb')
   const { scene } = gltf
 
   // Clone the scene to avoid modifying the original
@@ -83,9 +83,9 @@ export default function MoonScene() {
       >
         {/* Lighting */}
         <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 5]} intensity={1} />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#8b5cf6" />
-        <pointLight position={[10, -10, -10]} intensity={0.5} color="#60a5fa" />
+        <directionalLight position={[10, 10, 5]} intensity={5} />
+        {/* <pointLight position={[-10, -10, -10]} intensity={0.5} color="#8b5cf6" /> */}
+        {/* <pointLight position={[10, -10, -10]} intensity={0.5} color="#60a5fa" /> */}
 
         {/* 3D Model */}
         <Suspense fallback={null}>
@@ -105,5 +105,5 @@ export default function MoonScene() {
 }
 
 // Preload the GLB file
-useGLTF.preload('/3d/small-asturnate.glb')
+useGLTF.preload('/3d/asturant.glb')
 

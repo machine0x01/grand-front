@@ -9,7 +9,7 @@ import AnimatedStars from './AnimatedStars';
 
 export default function GraphicDesignSection() {
   return (
-    <section id="graphic-design" className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-slate-950 to-black">
+    <section id="courses" className="min-h-screen relative overflow-hidden bg-gradient-to-b from-black via-slate-950 to-black">
       {/* Animated Background Elements - Matching Hero and About */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-600/15 rounded-full blur-3xl animate-pulse"></div>

@@ -42,7 +42,7 @@ function Footer() {
   ];
 
   return (
-   <footer ref={footerRef} className="relative bg-gradient-to-b from-black via-slate-950 to-black overflow-hidden">
+   <footer id="contact" ref={footerRef} className="relative bg-gradient-to-b from-black via-slate-950 to-black overflow-hidden">
      {/* Animated Stars Background - Matching Hero */}
      {/* <AnimatedStars 
        count={100}

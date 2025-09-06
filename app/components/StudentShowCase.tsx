@@ -2,7 +2,7 @@
 
 import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import AnimatedStars from './AnimatedStars';
 
 // TypeScript Interfaces
@@ -290,11 +290,11 @@ const CreationsShowcase: React.FC<CreationsShowcaseProps> = ({ courses_section =
   const totalPages: number = filteredProjects.length;
   const currentProject = filteredProjects[currentPage - 1];
 
-  const handlePageChange = (newPage: number): void => {
+  const handlePageChange = useCallback((newPage: number): void => {
     if (newPage >= 1 && newPage <= totalPages && !isAnimating) {
       setCurrentPage(newPage);
     }
-  };
+  }, [totalPages, isAnimating]);
 
   const handleCategoryChange = (categorySlug: string): void => {
     if (categorySlug !== activeCategory && !isAnimating) {
@@ -319,7 +319,7 @@ const CreationsShowcase: React.FC<CreationsShowcaseProps> = ({ courses_section =
 
   if (!currentProject) {
     return (
-      <section className="flex min-h-screen items-center justify-center p-4 text-white sm:p-8">
+      <section id="portfolio" className="flex min-h-screen items-center justify-center p-4 text-white sm:p-8">
         <div className="text-center">
           <h2 className="mb-4 text-2xl font-bold">No Projects Available</h2>
           <p className="text-slate-300">There are no projects to display for the selected category.</p>

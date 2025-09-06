@@ -68,7 +68,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="relative min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-black via-slate-950 to-black">
+    <section id="about" className="relative min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-black via-slate-950 to-black">
       {/* Animated Background Elements - Matching Hero */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 bg-purple-600/15 rounded-full blur-3xl animate-pulse"></div>

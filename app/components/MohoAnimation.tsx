@@ -1,6 +1,7 @@
 "use client"
 
 import { ArrowRight, Users, Award, Star, CheckCircle } from "lucide-react"
+import Image from "next/image"
 import AnimatedStars from "./AnimatedStars"
 
 
@@ -90,30 +91,7 @@ export default function MohoAnimationSection() {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h4 className="text-2xl font-semibold text-white">Course Duration</h4>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <div className="flex items-center justify-between">
-                  <span className="text-violet-300">Total Hours:</span>
-                  <span className="text-2xl font-bold text-violet-300">28 Hours</span>
-                </div>
-                <div className="flex items-center justify-between mt-2">
-                  <span className="text-violet-300">Exercises:</span>
-                  <span className="text-2xl font-bold text-violet-300">56 Projects</span>
-                </div>
-                <div className="flex items-center justify-between mt-2">
-                  <span className="text-violet-300">Certification:</span>
-                  <span className="text-violet-300 font-semibold">Included</span>
-                </div>
-              </div>
-            </div>
 
-            <div className="space-y-4">
-              <h4 className="text-2xl font-semibold text-white">Prerequisites</h4>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <p className="text-violet-100">Basic computer skills • Understanding of animation principles • Creative mindset</p>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Moho Animation Demo */}
@@ -123,10 +101,13 @@ export default function MohoAnimationSection() {
               
               {/* Moho Animation GIF */}
               <div className=" rounded-lg p-4 mb-6">
-                <img 
+                <Image 
                   src="https://moho.lostmarble.com/cdn/shop/files/follow_through2.gif?v=1691765371" 
                   alt="Moho Pro follow-through animation demo" 
+                  width={600}
+                  height={256}
                   className="w-full h-64 object-cover rounded-lg"
+                  unoptimized
                 />
               </div>
               

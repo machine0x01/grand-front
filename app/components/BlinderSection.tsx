@@ -155,30 +155,6 @@ export default function Blender3DSection() {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h4 className="text-2xl font-semibold text-white">Course Duration</h4>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <div className="flex items-center justify-between">
-                  <span className="text-teal-300">Total Hours:</span>
-                  <span className="text-2xl font-bold text-teal-300">36 Hours</span>
-                </div>
-                <div className="flex items-center justify-between mt-2">
-                  <span className="text-teal-300">Exercises:</span>
-                  <span className="text-2xl font-bold text-teal-300">72 Projects</span>
-                </div>
-                <div className="flex items-center justify-between mt-2">
-                  <span className="text-teal-300">Certification:</span>
-                  <span className="text-teal-300 font-semibold">Included</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="text-2xl font-semibold text-white">Prerequisites</h4>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <p className="text-teal-100">Basic computer skills • Creative mindset • No prior 3D experience required</p>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Interactive 3D Model */}

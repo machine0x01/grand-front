@@ -1,5 +1,6 @@
 import HeroHome from "./components/HeroHome";
 import AboutSection from "./components/AboutSection";
+import BundleSection from "./components/sections/BundleSection";
 import Footer from "./components/Footer";
 import GraphicDesignSection from "./components/GraphicDesgin";
 import MotionGraphicsSection from "./components/MotionGraphic";
@@ -15,6 +16,7 @@ export default function Home() {
       <SplashCursor />
       <HeroHome />
       <AboutSection />
+      <BundleSection />
       <GraphicDesignSection />
       <MotionGraphicsSection />
       <MohoAnimationSection />
